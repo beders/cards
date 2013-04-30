@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House of cards</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+</head>
+<body>
+<div class='play-area'>
+    <div class='stream'>
+        <h4 class='play-area-name'>STREAM</h4>
+        <article id='c1' class='card'><div class='card-header'><img class='card-symbol' src="assets/img/twitter-bird-light-bgs.png"><span class='card-time-left'>14m</span></div><div class='card-body'><img src='https://si0.twimg.com/profile_images/957726497/Smileyface_normal.jpg' class='card-image img-rounded'><div class='card-author'><span>beders</span></div><div class='card-text'>The rain in spain falls mainly on very long tweets or other messages</div></div></article>
+        <article id='c2' class='card'><div class='card-header'><img class='card-symbol' src="assets/img/twitter-bird-light-bgs.png"><span class='card-time-left'>14m</span></div><div class='card-body'><img src='https://si0.twimg.com/profile_images/3189266073/49f503c14ab6bdea6e5323bf6d0ef888_bigger.jpeg' class='card-image img-rounded'><div class='card-author'><span>Gates McFadden</span></div><div class='card-text'>The rain in spain falls mainly on very long tweets or other messages</div></div></article>
+        <article id='c3' class='card'><div class='card-header'><img class='card-symbol' src="assets/img/twitter-bird-light-bgs.png"><span class='card-time-left'>14m</span></div><div class='card-body'><img src='https://si0.twimg.com/profile_images/2449509523/f0gkhyhpwmv7m6ncyxbl_bigger.png' class='card-image img-rounded'><div class='card-author'><span>Wil Wheaton</span></div><div class='card-text'>I used to subscribe to alt.wesley.die.die.die</div></div></article>
+        <article id='c4' class='card'><div class='card-header'><img class='card-symbol' src="assets/img/twitter-bird-light-bgs.png"><span class='card-time-left'>14m</span></div><div class='card-body'><img src='https://si0.twimg.com/profile_images/389775353/DickensMartiniMan_bigger.jpg' class='card-image img-rounded'><div class='card-author'><span>Brent Spiner</span></div><div class='card-text'>Star Trek on the big screen tonight. Very excited! Locutus of Borg happens to be a personal friend of mine.</div></div></article>
+
+    </div>
+    <div class='work-area'><h4 class='play-area-name'>WORK</h4></div>
+    <div class='tracking-area'><h4 class='play-area-name'>TRACK</h4>
+        <div class='tracker'></div><div class='tracker'></div><div class='tracker'></div><div class='tracker'></div>
+    </div>
+
+    <div class='team-area'><h4 style='text-align: right' class='play-area-name'>TEAM</h4>
+        <div style='float:right'>
+        <div class='team-member'><img class='img-rounded' src='assets/img/Agent1.jpg'></div>
+        <div class='team-member'><img class='img-rounded' src='assets/img/Agent2.jpg'></div>
+        <div class='team-member'><img class='img-rounded' src='assets/img/Agent3.jpg'></div>
+            </div>
+    </div>
+    <div class='trash'><h4 class='play-area-name'>TRASH</h4></div>
+</div>
+
+</div>
+<script src="build/build.js"></script>
+<script>
+    require('cards')();
+</script>
+</body>
+</html>

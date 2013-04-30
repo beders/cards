@@ -1,0 +1,1 @@
+module.exports = '<template>\n    <div class=\'card\'>\n    <img src=""/>\n    <span>Subject</span>\n    <div>Text</div>\n    </div>\n</template>';

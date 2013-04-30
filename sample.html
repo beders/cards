@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House of cards</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+</head>
+<body>
+<!-- <template class='display:none'>
+    <div class='card'>
+        <img src=""/>
+        <span>Subject</span>
+        <div>Text</div>
+    </div>
+</template> -->
+<section dropzone="move">
+    <h2>Deck</h2>
+    <article draggable="true" id='c1' class='card' dropzone="move">Card 1</article>
+    <article draggable="true" id='c2' class='card' dropzone="move">Card 2</article>
+</section>
+<section>
+    <h2>Board</h2>
+    <section  dropzone="move" class='pile'></section>
+</section>
+<script>console.error("GAA");</script>
+<script src="build/build.js"></script>
+<script>
+    var draggedCard;
+    console.error("Bubu");
+    $ = require('component-jquery');
+    $('article[draggable]').on('dragstart', function (e) {
+        console.log('Drag started for ' + this.id);
+        e.originalEvent.dataTransfer.effectAllowed = 'move';
+        draggedCard = this.id;
+        e.originalEvent.dataTransfer.setData('text/plain', this.id);
+        e.stopPropagation();
+    });
+
+
+    $('[dropzone]').on('dragenter', handleDragEnter).
+            on('dragover', handleDragOver).
+            on('dragleave', handleDragLeave).
+            on('drop', handleDrop);
+
+    function handleDragEnter(e) {
+        console.log("Dragenter");
+        if (this.id != draggedCard) {
+            this.classList.add('animated');
+            this.classList.add('pulse');
+        }
+    }
+
+    function handleDragLeave(e) {
+        this.classList.remove('animated');  // this / e.target is previous target element.
+        this.classList.remove('pulse');  // this / e.target is previous target element.
+    }
+
+
+    function handleDragOver(e) {
+        console.log("Drag over");
+        if (e.preventDefault) {
+            e.preventDefault(); // Necessary. Allows us to drop.
+        }
+
+        e.originalEvent.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+
+        return false;
+    }
+
+    function handleDrop(e) {
+        console.log("Dropped");
+        e.stopPropagation();
+        var id = e.originalEvent.dataTransfer.getData('text/plain');
+        console.log("Dropping ID:" + id);
+        $(this).append($('#' + id));
+        return false;
+    }
+
+</script>
+</body>
+</html>

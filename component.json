@@ -1,0 +1,25 @@
+{
+  "name": "cards",
+  "repo": "beders/cards",
+  "description": "Interaction and presentation library based on a cards metaphor",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "btknorr/bootstrap": "*",
+    "kelonye/jquery-ui": "*",
+    "btknorr-bootstrap": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "cards.css",
+    "animate.css"
+  ],
+  "files": [
+    "assets/img/twitter-bird-light-bgs.png", "assets/img/glyphicons_034_old_man.png"
+  ]
+}
